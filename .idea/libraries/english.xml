@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="english">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/morphology/english.jar!/" />
+      <root url="jar://$PROJECT_DIR$/morphology/dictionary-reader.jar!/" />
+      <root url="jar://$PROJECT_DIR$/morphology/morph.jar!/" />
+      <root url="jar://$PROJECT_DIR$/morphology/russian.jar!/" />
+      <root url="jar://$PROJECT_DIR$/morphology/morphology.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

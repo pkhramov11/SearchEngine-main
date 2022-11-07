@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="info">
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+        <File name="exceptions" fileName="logs/exceptions.log">
+            <PatternLayout pattern="%d{yyyy-mm-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+
+        <File name="symbol_errors" fileName="logs/symbol_errors.log">
+            <PatternLayout pattern="%d{yyyy-mm-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Filters>
+                <MarkerFilter marker="INVALID_SYMBOL" />
+            </Filters>
+        </File>
+    </appenders>
+
+    <loggers>
+        <root level="info">
+            <appender-ref ref="Console" level="info"/>
+            <appender-ref ref="exceptions" level="error"/>
+        </root>
+    </loggers>
+    <loggers>
+        <root level="OFF">
+            <appender-ref ref="symbol_errors"/>
+        </root>
+    </loggers>
+</configuration>

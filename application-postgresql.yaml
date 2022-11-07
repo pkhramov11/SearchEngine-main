@@ -1,0 +1,17 @@
+spring:
+  sql.init:
+#    mode: always
+    mode: never
+    platform: postgresql
+  datasource:
+    url: jdbc:postgresql://comprenotst10:5432/test
+    driver-class-name: org.postgresql.Driver
+    username: test
+    password: test
+  jpa:
+    database: postgresql
+    hibernate.ddl-auto: none
+
+config:
+  synchronizePageSave: false
+  multiInsertString: insert into index(page_id, lemma_id, rank)

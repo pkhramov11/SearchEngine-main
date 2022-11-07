@@ -1,0 +1,13 @@
+spring:
+#jpa.hibernate.ddl-auto: create
+  jpa.hibernate.ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/search_engine
+    useSSL: false
+    allowPublicKeyRetrieval: true
+    username: root
+    password: springcourse
+
+config:
+  synchronizePageSave: true
+  multiInsertString: insert into search_engine.index(page_id, lemma_id, search_engine.index.rank)
